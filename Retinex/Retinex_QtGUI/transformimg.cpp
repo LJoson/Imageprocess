@@ -112,19 +112,7 @@ vector<double> transformimg::createSigema(int maxScale,int scale)
     return sigema;
 }
 
-//计算图像方差
-double transformimg::analyse(Mat input)
-{
-    Mat imageGrey;
-    cvtColor(input,imageGrey,CV_RGB2GRAY);
-    Mat meanValueImage;
-    Mat meanStdValueImage;
 
-    meanStdDev(imageGrey,meanValueImage,meanStdValueImage);
-    double meanValue = 0.0;
-    meanValue = meanStdValueImage.at<double>(0,0);
-    return meanValue;
-}
 
 
 //计算图像方差
